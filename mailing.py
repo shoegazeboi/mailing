@@ -259,7 +259,7 @@ def whatsapp(number, text): #part_start: рассылка на вотс.
     os.system("TASKKILL /F /IM chrome.exe")
 
     options = webdriver.ChromeOptions()
-    options.add_argument('--user-data-dir=C:\\Users\{}\AppData\Local\Chromium\\User Data'.format(db[1]))
+    options.add_argument('--user-data-dir=C:/Users/{}/AppData/Local/Google/Chrome/User Data'.format(db[1]))
     #options.add_argument('headless') #FixMe: При включенном headless, парсер перестает рабоать.
     driver = webdriver.Chrome(executable_path='{}'.format(db[0]), chrome_options=options)
     driver_delay = WebDriverWait(driver, 10)
@@ -371,7 +371,7 @@ def vk(): #TODO: сделать рассылку вк.
     os.system("TASKKILL /F /IM chrome.exe")
 
     options = webdriver.ChromeOptions()
-    options.add_argument('--user-data-dir=C:\\Users\{}\AppData\Local\Chromium\\User Data'.format(db[1]))
+    options.add_argument('--user-data-dir=C:/Users/{}/AppData/Local/Google/Chrome/User Data'.format(db[1]))
     options.add_argument('headless')
     driver = webdriver.Chrome(executable_path='{}'.format(db[0]), chrome_options=options)
     driver_delay = WebDriverWait(driver, 10)
